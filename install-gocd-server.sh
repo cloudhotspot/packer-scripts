@@ -3,4 +3,3 @@ echo "deb http://dl.bintray.com/gocd/gocd-deb/ /" | sudo tee /etc/apt/sources.li
 wget --quiet -O - "https://bintray.com/user/downloadSubjectPublicKey?username=gocd" | sudo apt-key add -
 sudo apt-get update -y
 sudo apt-get install go-server go-agent -y
-sudo usermod -aG docker go
