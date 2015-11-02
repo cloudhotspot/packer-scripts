@@ -12,6 +12,5 @@ sudo curl -L https://github.com/docker/compose/releases/download/1.5.0rc3/docker
 sudo chmod +x /usr/local/bin/docker-compose
 
 # Configure Docker
-sudo usermod -aG docker vagrant
 sudo grep -q '^GRUB_CMDLINE_LINUX=' /etc/default/grub && sudo sed -i 's/^GRUB_CMDLINE_LINUX=.*$/GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1"/g' /etc/default/grub || sudo sed '$ a\GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1"' -i /etc/default/grub
 sudo update-grub
